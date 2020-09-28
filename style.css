@@ -1,0 +1,58 @@
+/** PROPRIEDADES GLOBAIS **/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-top-highlight-color: transparent;
+}
+:root{
+    --slider-width:50rem;
+    --slider-height:30rem;
+
+}
+html,
+body{
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #121212;
+}
+.compare{
+    position: relative;
+    height: var(--slider-height);
+    width: var(--slider-width);
+}
+.compare__slider {
+    position: absolute;
+    z-index: 1;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #121212;
+    border: .1rem solid rgba(255, 255, 255, .1);
+    box-shadow: 0 .2rem .8rem rgba(0, 0, 0, .0);
+    border-radius: 50%;
+    cursor: grab;
+    transition: border-color .2s;
+}
+.compare__slider:active{
+    border: .1rem solid rgba(255, 255, 255, .1);
+    cursor: grabbing;
+}
+.compare__image {
+    position: absolute;
+    height: var(--slider-height);
+    width: var(--slider-width);
+    border-radius: .4rem;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+}
+.compare__image img{
+    height: var(--slider-height);
+    width: var(--slider-width);
+    object-fit: cover;
+}
